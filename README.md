@@ -1,4 +1,4 @@
-# Portfolio
+# Arafat Islam
 
 Welcome to my portfolio! Here, I showcase various projects that highlight my skills and experience in web development.
 
