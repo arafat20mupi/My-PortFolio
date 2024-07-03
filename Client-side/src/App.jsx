@@ -4,6 +4,7 @@ import Header from './Components/Header/Header';
 import Home from './Pages/Home';
 import About from './Pages/About';
 import Skills from './Pages/Skills';
+import Services from './Pages/Services';
 
 function App() {
   const location = useLocation();
@@ -22,6 +23,7 @@ function App() {
         <Home />
         <About></About>
         <Skills></Skills>
+        <Services></Services>
       </div>
     </>
   );
