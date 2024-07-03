@@ -10,8 +10,6 @@ Explore my work live: [Portfolio](https://my-port-folio-hmwq.vercel.app/)
 
 ### Assetflow
 
-![Assetflow](https://via.placeholder.com/600x400.png?text=Assetflow)
-
 - **Description:** Assetflow is a full-stack web application built with ReactJs and Node.js. It helps manage assets efficiently.
 - **Technologies:** ReactJs, Node.js, Express.js, MongoDB, Firebase
 - **Live Link:** [Visit Assetflow](https://assetflow-2ac74.web.app/)
@@ -19,7 +17,6 @@ Explore my work live: [Portfolio](https://my-port-folio-hmwq.vercel.app/)
 
 ### Othaba.com
 
-![Othaba.com](https://via.placeholder.com/600x400.png?text=Othaba.com)
 
 - **Description:** Othaba.com is a ReactJs application for a blood bank, built to facilitate blood donation and management.
 - **Technologies:** ReactJs, Next.js, Firebase
@@ -28,7 +25,6 @@ Explore my work live: [Portfolio](https://my-port-folio-hmwq.vercel.app/)
 
 ### Turio
 
-![Turio](https://via.placeholder.com/600x400.png?text=Turio)
 
 - **Description:** Turio is a tourism web application built using ReactJs, aimed at promoting travel destinations.
 - **Technologies:** ReactJs, Node.js, Express.js, MongoDB, Firebase
@@ -37,7 +33,6 @@ Explore my work live: [Portfolio](https://my-port-folio-hmwq.vercel.app/)
 
 ### ReTro
 
-![ReTro](https://via.placeholder.com/600x400.png?text=ReTro)
 
 - **Description:** ReTro is a JavaScript-based retro game showcase website, featuring classic games.
 - **Technologies:** JavaScript, HTML/CSS
@@ -46,7 +41,6 @@ Explore my work live: [Portfolio](https://my-port-folio-hmwq.vercel.app/)
 
 ### Home-Press
 
-![Home-Press](https://via.placeholder.com/600x400.png?text=Home-Press)
 
 - **Description:** Home-Press is a ReactJs application designed to showcase real estate properties.
 - **Technologies:** ReactJs, Firebase
