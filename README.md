@@ -18,7 +18,7 @@ Explore my work live: [Portfolio](https://my-port-folio-hmwq.vercel.app/)
 ### Othaba.com
 
 
-- **Description:** Othaba.com is a ReactJs application for a blood bank, built to facilitate blood donation and management.
+- **Description:** Othaba.com provides a user-friendly interface for users to ask and answer questions about products, view product alternatives, and make informed purchasing decisions.
 - **Technologies:** ReactJs, Next.js, Firebase
 - **Live Link:** [Visit Othaba.com](https://fullstack-nextjs-blood-bank.vercel.app/)
 - **GitHub:** [Repository](https://github.com/arafat20mupi/Othaba.com-client.git)
