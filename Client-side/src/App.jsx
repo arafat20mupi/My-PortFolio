@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import Header from './Components/Header/Header';
 import Home from './Pages/Home';
+import About from './Pages/About';
 
 function App() {
   const location = useLocation();
@@ -18,6 +19,7 @@ function App() {
       </div>
       <div className="container mx-auto">
         <Home />
+        <About></About>
       </div>
     </>
   );
