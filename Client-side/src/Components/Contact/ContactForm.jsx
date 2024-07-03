@@ -67,9 +67,9 @@ const ContactForm = () => {
         />
         <button
           type="submit"
-          className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline flex items-center justify-center"
+          className="btn border bg-black text-white text-lg  font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline flex items-center justify-center"
         >
-          Send me <CiLocationArrow1 className="inline-block ml-2" />
+          Send me <CiLocationArrow1 className="inline-block text-white ml-2" />
         </button>
       </form>
       {alert.message && (
