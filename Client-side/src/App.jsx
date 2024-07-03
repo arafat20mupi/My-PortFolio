@@ -7,6 +7,7 @@ import Skills from './Pages/Skills';
 import Services from './Pages/Services';
 import Portfolio from './Pages/Portfolio';
 import Contact from './Pages/Contact';
+import Footer from './Pages/Footer';
 
 function App() {
   const location = useLocation();
@@ -18,17 +19,16 @@ function App() {
 
   return (
     <>
-      <div className=''>
       <Header />
-      </div>
       <div className="container mx-auto">
-        <Home />
+        <Home ></Home>
         <About></About>
         <Skills></Skills>
         <Services></Services>
         <Portfolio></Portfolio>
         <Contact></Contact>
       </div>
+      <Footer></Footer>
     </>
   );
 }

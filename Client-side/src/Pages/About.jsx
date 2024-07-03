@@ -2,6 +2,12 @@ import { FaCheckCircle, FaBusinessTime, FaHeadset, FaFileDownload } from 'react-
 import Qualification from './Qualification';
 
 const About = () => {
+   // Function to handle resume download
+   const handleDownloadResume = () => {
+    // Replace with your resume file URL
+    const resumeUrl = 'Fullstack_Developer_resume_of_Arafat.pdf'; // Change this URL
+    window.open(resumeUrl, '_blank'); // Opens the resume URL in a new tab
+  };
   return (
     <div id="about" className="flex flex-col items-center p-6">
       {/* About section */}
@@ -42,7 +48,7 @@ const About = () => {
             </p>
             <button
               className="mt-4 bg-black text-white px-4 py-2 rounded flex items-center hover:bg-gray-700"
-              onClick={() => window.location.href = 'mailto:moin.coder@gmail.com'}
+              onClick={handleDownloadResume} // Call the function on button click
             >
               Download Resume <FaFileDownload className="ml-2" />
             </button>

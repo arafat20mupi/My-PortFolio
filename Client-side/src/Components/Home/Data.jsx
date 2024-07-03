@@ -24,12 +24,12 @@ const Data = () => {
 
     return (
         <div className="">
-            <div className="flex flex-col-reverse md:flex-row justify-between text-center w-full  items-center h-full">
+            <div className="flex  flex-col-reverse md:flex-row justify-between text-center w-full  items-center h-full">
                 <div className=" ">
                     <Social />
                 </div>
                 <div className=" md:w-full flex flex-col md:flex-row items-center justify-center">
-                    <div className="text-center space-y-6 md:text-left p-4 max-w-lg">
+                    <div className="text-center space-y-6 md:text-left mt-10 md:mt-0 p-4 max-w-lg">
                         <h1 className="text-3xl md:text-4xl font-bold">Arafat Islam</h1>
                         <p className="text-lg my-2"><span ref={el}></span></p>
                         <p className="text-base my-2">

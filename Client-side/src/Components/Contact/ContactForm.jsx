@@ -1,5 +1,6 @@
 import { useRef, useState } from 'react';
 import { CiLocationArrow1 } from 'react-icons/ci';
+import emailjs from 'emailjs-com';
 
 const ContactForm = () => {
   const formRef = useRef();
@@ -11,27 +12,32 @@ const ContactForm = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    // Simulate form submission
-    console.log('Form submitted with:', {
-      clientName,
-      clientEmail,
-      projectDetails
+    emailjs.sendForm(
+      import.meta.env.VITE_EMAILJS_SERVICE_ID, // Replace with your EmailJS template ID
+      import.meta.env.VITE_EMAILJS_TEMPLATE_ID, // Replace with your EmailJS service ID
+      formRef.current,
+      import.meta.env.VITE_EMAILJS_PUBLIC_KEY // Replace with your EmailJS user ID
+    ).then((result) => {
+      console.log(result.text);
+      setAlert({ message: 'SUCCESS! Your message has been sent.', severity: 'success' });
+    }, (error) => {
+      console.log(error.text);
+      setAlert({ message: 'ERROR! Something went wrong.', severity: 'error' });
     });
 
     // Clear form fields
     setClientName('');
     setClientEmail('');
     setProjectDetails('');
-
-    // Show success message
-    setAlert({ message: 'SUCCESS! Your message has been sent.', severity: 'success' });
   };
 
   return (
     <div className="flex flex-col items-center py-10 space-y-6 justify-center w-full max-w-md">
       <h1 className="text-3xl font-medium mb-5">Write me your project</h1>
       <form ref={formRef} onSubmit={sendEmail} className="w-full">
+        <label htmlFor="clientName" className="sr-only">Name</label>
         <input
+          id="clientName"
           type="text"
           className="w-full px-4 py-2 mb-4 border rounded-md focus:outline-none focus:border-blue-500"
           placeholder="Name"
@@ -39,7 +45,9 @@ const ContactForm = () => {
           onChange={(e) => setClientName(e.target.value)}
           required
         />
+        <label htmlFor="clientEmail" className="sr-only">Email</label>
         <input
+          id="clientEmail"
           type="email"
           className="w-full px-4 py-2 mb-4 border rounded-md focus:outline-none focus:border-blue-500"
           placeholder="Email"
@@ -47,7 +55,9 @@ const ContactForm = () => {
           onChange={(e) => setClientEmail(e.target.value)}
           required
         />
+        <label htmlFor="projectDetails" className="sr-only">Project Details</label>
         <textarea
+          id="projectDetails"
           className="w-full px-4 py-2 mb-4 border rounded-md resize-none focus:outline-none focus:border-blue-500"
           rows="4"
           placeholder="Project Details"
@@ -57,7 +67,7 @@ const ContactForm = () => {
         />
         <button
           type="submit"
-          className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+          className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline flex items-center justify-center"
         >
           Send me <CiLocationArrow1 className="inline-block ml-2" />
         </button>

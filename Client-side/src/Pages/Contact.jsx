@@ -1,6 +1,6 @@
 import { FiPhone, } from 'react-icons/fi'; 
-import ContactForm from '../Components/Contact/ContactForm';
 import QuickContact from '../Components/Contact/QuickContact';
+import ContactForm from '../Components/Contact/ContactForm';
 
 const Contact = () => {
   return (
