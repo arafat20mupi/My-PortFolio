@@ -6,7 +6,7 @@ const pages = [
     { label: 'About', path: 'about', offset: -105 },
     { label: 'Skills', path: 'skills', offset: -105 },
     { label: 'Services', path: 'services', offset: -80 },
-    { label: 'Portfolio', path: 'portfolio', offset: -80 },
+    { label: 'Projects', path: 'portfolio', offset: -80 },
     { label: 'Contact', path: 'contact', offset: -90 },
 ];
 

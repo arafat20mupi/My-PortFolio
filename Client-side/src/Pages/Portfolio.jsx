@@ -57,7 +57,7 @@ const Portfolio = () => {
           ))}
         </div>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 px-3">
+      <div className="grid grid-cols-1 justify-center md:grid-cols-2 lg:grid-cols-3 gap-5 px-3">
         {filteredProjects.map((project) => (
           <div key={project.id} className="border p-4 rounded shadow-lg">
             <div className="text-center mb-2">

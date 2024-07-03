@@ -6,6 +6,7 @@ import About from './Pages/About';
 import Skills from './Pages/Skills';
 import Services from './Pages/Services';
 import Portfolio from './Pages/Portfolio';
+import Contact from './Pages/Contact';
 
 function App() {
   const location = useLocation();
@@ -26,6 +27,7 @@ function App() {
         <Skills></Skills>
         <Services></Services>
         <Portfolio></Portfolio>
+        <Contact></Contact>
       </div>
     </>
   );
