@@ -8,23 +8,24 @@ const ContactForm = () => {
   const [clientEmail, setClientEmail] = useState('');
   const [projectDetails, setProjectDetails] = useState('');
   const [alert, setAlert] = useState({ message: '', severity: '' });
-
   const sendEmail = (e) => {
     e.preventDefault();
 
     emailjs.sendForm(
-      import.meta.env.VITE_EMAILJS_SERVICE_ID, 
-      import.meta.env.VITE_EMAILJS_TEMPLATE_ID, 
+      'service_2sj65o5',
+      'template_ocxgq1k',
       formRef.current,
-      import.meta.env.VITE_EMAILJS_PUBLIC_KEY 
-    ).then((result) => {
-      console.log(result.text);
-      setAlert({ message: 'SUCCESS! Your message has been sent.', severity: 'success' });
-    }, (error) => {
-      console.log(error.text);
-      setAlert({ message: 'ERROR! Something went wrong.', severity: 'error' });
-    });
-
+      {
+        publicKey: 'TY6_CdPLenkkzS9gI',
+      })
+      
+      .then((result) => {
+        console.log(result.text);
+        setAlert({ message: 'SUCCESS! Your message has been sent.', severity: 'success' });
+      }, (error) => {
+        console.log(error.message);
+        setAlert({ message: 'ERROR! Something went wrong.', severity: 'error' });
+      });
     setClientName('');
     setClientEmail('');
     setProjectDetails('');
@@ -33,6 +34,7 @@ const ContactForm = () => {
   return (
     <div className="flex flex-col items-center py-10 space-y-6 justify-center w-full max-w-md">
       <h1 className="text-3xl font-medium mb-5">Write me your project</h1>
+
       <form ref={formRef} onSubmit={sendEmail} className="w-full">
         <label htmlFor="clientName" className="sr-only">Name</label>
         <input
@@ -54,7 +56,7 @@ const ContactForm = () => {
           name='from_email'
           value={clientEmail}
           onChange={(e) => setClientEmail(e.target.value)}
-          
+
           required
         />
         <label htmlFor="projectDetails" className="sr-only">Project Details</label>
