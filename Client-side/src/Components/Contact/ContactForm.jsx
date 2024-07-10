@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react';
 import { CiLocationArrow1 } from 'react-icons/ci';
-import emailjs from 'emailjs-com';
+import emailjs from '@emailjs/browser';
 
 const ContactForm = () => {
   const formRef = useRef();
@@ -13,10 +13,10 @@ const ContactForm = () => {
     e.preventDefault();
 
     emailjs.sendForm(
-      import.meta.env.VITE_EMAILJS_SERVICE_ID, // Replace with your EmailJS template ID
-      import.meta.env.VITE_EMAILJS_TEMPLATE_ID, // Replace with your EmailJS service ID
+      import.meta.env.VITE_EMAILJS_SERVICE_ID, 
+      import.meta.env.VITE_EMAILJS_TEMPLATE_ID, 
       formRef.current,
-      import.meta.env.VITE_EMAILJS_PUBLIC_KEY // Replace with your EmailJS user ID
+      import.meta.env.VITE_EMAILJS_PUBLIC_KEY 
     ).then((result) => {
       console.log(result.text);
       setAlert({ message: 'SUCCESS! Your message has been sent.', severity: 'success' });
@@ -25,7 +25,6 @@ const ContactForm = () => {
       setAlert({ message: 'ERROR! Something went wrong.', severity: 'error' });
     });
 
-    // Clear form fields
     setClientName('');
     setClientEmail('');
     setProjectDetails('');
@@ -40,7 +39,8 @@ const ContactForm = () => {
           id="clientName"
           type="text"
           className="w-full px-4 py-2 mb-4 border rounded-md focus:outline-none focus:border-blue-500"
-          placeholder="Name"
+          placeholder="Your Name"
+          name='from_name'
           value={clientName}
           onChange={(e) => setClientName(e.target.value)}
           required
@@ -50,9 +50,11 @@ const ContactForm = () => {
           id="clientEmail"
           type="email"
           className="w-full px-4 py-2 mb-4 border rounded-md focus:outline-none focus:border-blue-500"
-          placeholder="Email"
+          placeholder="Your Email"
+          name='from_email'
           value={clientEmail}
           onChange={(e) => setClientEmail(e.target.value)}
+          
           required
         />
         <label htmlFor="projectDetails" className="sr-only">Project Details</label>
@@ -61,6 +63,7 @@ const ContactForm = () => {
           className="w-full px-4 py-2 mb-4 border rounded-md resize-none focus:outline-none focus:border-blue-500"
           rows="4"
           placeholder="Project Details"
+          name='message'
           value={projectDetails}
           onChange={(e) => setProjectDetails(e.target.value)}
           required
