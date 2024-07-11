@@ -1,4 +1,3 @@
-import React from 'react';
 import { FaGithub, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
 
 export const Social = () => {
@@ -15,7 +14,7 @@ export const Social = () => {
     };
 
     return (
-        <div className="flex md:flex-col items-center  md:space-y-8 justify-center h-64 md:h-screen md:pb-6 pl-4 md:space-x-0  md:ml-10 space-x-5 md:pl-6">
+        <div className="flex md:flex-col items-center  md:space-y-8 justify-center h-20 md:h-screen md:pb-6 pl-4 md:space-x-0  md:ml-10 space-x-5 md:pl-6">
             <button onClick={openGitHubProfile} className="bg-black p-2 rounded-full mb-2">
                 <FaGithub className="text-white text-xl" />
             </button>

@@ -25,8 +25,8 @@ const Header = () => {
 
     return (
         <div>
-            <header className="fixed w-full bg-white bg-opacity-50 backdrop-blur-md shadow-none rounded-xl z-50">
-                <div className="container mx-auto px-4 py-3 flex justify-between items-center">
+            <header className="fixed container mx-auto  w-full bg-white bg-opacity-50 backdrop-blur-md shadow-none rounded-xl z-50">
+                <div className=" px-4 py-3 flex justify-between items-center">
                     <div className="text-purple-800 font-bold text-xl tracking-wider">
                         <Link
                             to="home"
@@ -52,7 +52,7 @@ const Header = () => {
                             </Link>
                         ))}
                     </nav>
-                    <div className="md:hidden flex items-center">
+                    <div className="md:hidden ">
                         <button onClick={handleOpenNavMenu} className="text-purple-800 text-3xl">
                             ☰
                         </button>

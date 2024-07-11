@@ -15,7 +15,7 @@ const  Footer = () => {
                 </div>
                 <div className="w-full md:w-1/2 lg:w-1/4 mb-4 md:mb-0">
                     <h3 className="text-lg font-semibold mb-2">Quick Links</h3>
-                    <p><a href="#projects" className="text-gray-400 hover:text-white">Projects</a></p>
+                    <p><a href="#portfolio" className="text-gray-400 hover:text-white">Projects</a></p>
                     <p><a href="#about" className="text-gray-400 hover:text-white">About Me</a></p>
                     <p><a href="#resume" className="text-gray-400 hover:text-white">Resume</a></p>
                 </div>

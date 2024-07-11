@@ -42,11 +42,11 @@ const Data = () => {
                             Say Hello <FaPaperPlane className="ml-2" />
                         </button>
                     </div>
-                    <div className="max-w-sm mt-4 md:mt-0 md:ml-12">
+                    <div className="max-w-sm mt-4 p-6 md:mt-0 md:ml-12">
                         <img
                             alt="Arafat Islam"
                             src="portfolio.jpg"
-                            className="rounded-lg w-64 h-64 object-cover"
+                            className="rounded-lg   object-cover"
                         />
                     </div>
                 </div>
