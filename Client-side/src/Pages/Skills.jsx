@@ -54,7 +54,7 @@ const softSkills = [
 
 const Skills = () => {
   return (
-    <div id="skills" className="flex flex-col items-center w-full p-5">
+    <div id="skills" className="f w-full p-5">
       <div className="text-center mb-4">
         <h2 className="text-4xl font-semibold tracking-wide font-poppins">Skills</h2>
         <p className="text-gray-600 mt-2 font-poppins">My Technical Level</p>
@@ -99,19 +99,17 @@ const Skills = () => {
             </div>
           </div>
         </div>
-
-      </div>
-      <p className="text-gray-600 mt-2 font-poppins">My Soft Level</p>
-      <div className="max-w-xs mb-5">
-        <div className="bg-white shadow-md rounded-lg p-5 h-auto w-96 ">
-          <h3 className="text-xl font-semibold mb-4">Tools</h3>
-          <div className="grid grid-cols-2 gap-3">
-            {softSkills.map((item, index) => (
-              <div key={index} className="flex items-center gap-1">
-                <span className="text-lg">{item.icon}</span>
-                <p className="text-gray-600">{item.label}</p>
-              </div>
-            ))}
+        <div className="max-w-xs mb-5">
+          <div className="bg-white shadow-md rounded-lg p-5 h-64 w-96">
+            <h3 className="text-xl font-semibold mb-4">Soft Skills</h3>
+            <div className="grid grid-cols-2 gap-2">
+              {softSkills.map((item, index) => (
+                <div key={index} className="flex items-center gap-2">
+                  <span className="text-lg">{item.icon}</span>
+                  <p className="text-gray-600">{item.label}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

@@ -52,7 +52,7 @@ const Header = () => {
                             </Link>
                         ))}
                     </nav>
-                    <div className="md:hidden ">
+                    <div className="md:hidden mr-2">
                         <button onClick={handleOpenNavMenu} className="text-purple-800 text-3xl">
                             ☰
                         </button>

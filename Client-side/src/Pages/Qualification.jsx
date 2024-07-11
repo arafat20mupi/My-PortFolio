@@ -55,12 +55,12 @@ const Qualification = () => {
 
     return (
         <>
-            <div id="qualification" className="text-center mt-7 mb-7">
+            <div id="qualification" className="text-center my-7">
                 <h4 className="text-4xl font-semibold tracking-wide">Qualification</h4>
                 <p className="text-gray-600 tracking-wide">My Personal Journey</p>
             </div>
 
-            <div className="text-center mt-3">
+            <div className="text-center flex-wrap md:mt-3">
                 <button
                     className={`mx-1 px-4 py-2 rounded-md font-semibold border-2 ${activeSection === "education" ? 'bg-black text-white' : 'bg-white text-black'} border-black hover:bg-gray-300`}
                     onClick={() => handleSectionChange('education')}
@@ -75,13 +75,13 @@ const Qualification = () => {
                     Experience
                 </button>
             </div>
-            <div className="w-full flex flex-wrap justify-center ">
+            <div className="w-full flex flex-wrap  justify-center ">
                 <div className="max-w-3xl  flex flex-wrap gap-7 justify-center">
                     {activeSection === 'education' && (
-                        <div className="w-[400px]">
+                        <div className="w-[400px] ">
                             {education.map((step, index) => (
                                 <div key={index} className="mb-4 p-4 border-b-2">
-                                    <div key={index} className="flex items-start ">
+                                    <div key={index} className="flex  items-start ">
                                         <div className="text-lg bg-slate-200 px-2 rounded-full font-bold mr-3">{index + 1}</div>
                                         <div>
                                             <h6 className="text-lg font-semibold">{step.label}</h6>
